@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURALIDADE</title>
+</head>
+<body>
+    <h1>BRASILEIRO OU ESTRANGEIRO?</h1>
+    Em que País você vive hoje? <input type="text" name="txtnat" id="txtnat">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resultado"></div>
+
+    <script>
+        function verificar() {
+            var txtn = window.document.querySelector('input#txtnat')
+            var pais = txtn.value
+            var res = window.document.querySelector('div#resultado')
+
+            res.innerHTML = `<p>Você está vivendo em ${pais}.</p>`
+
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>Então você é <strong>BRASILEIRO!</strong></p>`
+            } else {
+                res.innerHTML += `<p>Então você é <strong>ESTRANGEIRO!</strong></p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
